@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ДЗ 2.1+</title>
+</head>
+<body>
+    <h1>Сравнение форматов изображений</h1>
+    <p>
+        Исходное изображение в формате <strong>JPEG</strong> было преобразовано без потери качества в 
+        <strong>WebP</strong>, <strong>PNG</strong> и <strong>GIF</strong>.
+        <br>
+        Для преобразования воспользуемся сайтом 
+        <a href="https://www.resizepixel.com" title="онлайн конвертер изображений" target="_blank">www.resizepixel.com</a>
+        <br>
+        Размеры полученных файлов:
+    </p>
+    <ul type="square">
+        <li>
+            <strong>WebP</strong> - 112 KB
+        </li>
+        <li>
+            <strong>JPEG</strong> - 173 KB
+        </li>
+        <li>
+            <strong>GIF</strong> - 471 KB
+        </li>
+        <li>
+            <strong>PNG</strong> - 725 KB
+        </li>
+    </ol>
+    <p>
+        Очевидно, что формат WebP выигрывает по размеру файла при равном качестве. <br>
+        А теперь сожмем все изображения до размера файла WebP (112 KB) и визуально сравним:
+    </p>
+    <table>
+        <tr>
+            <td><strong>WebP</strong></td>
+            <td><strong>JPEG</strong></td>
+            <td><strong>GIF</strong></td>
+            <td><strong>PNG</strong></td>
+        </tr>
+        <tr>
+            <td><img src="img\kolibri_WebP.webp" title="WebP_pic_example" alt="WebP_pic"></td>
+            <td><img src="img\1kolibri_JPG_comp.jpg" title="JPEG_pic_example" alt="JPEG_pic"></td>
+            <td><img src="img\1kolibri_GIF_comp.gif" title="GIF_pic_example" alt="GIF_pic"></td>
+            <td><img src="img\1kolibri_PNG_comp.png" title="PNG_pic_example" alt="PNG_pic"></td>
+        </tr>
+    </table>
+      
+
+</body>
+</html>
