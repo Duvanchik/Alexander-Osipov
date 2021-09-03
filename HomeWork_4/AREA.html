@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Карты-изображения_HW-4.2+</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 800px; margin-left: auto; margin-right: auto;">
+    
+    <h1 >Карты изображения</h1>
+    
+    <p style="text-indent:20px">
+        Карты-изображения позволяют привязывать ссылки к разным областям одного изображения. 
+        Для указания того, что изображение является картой, используется атрибут <tt>usemap</tt> тега &lt;img&gt;. 
+        Он является ссылкой на описание конфигурации карты, которая задается тегом &lt;map&gt;.
+        В качестве значения <tt>usemap</tt> указывается ссылка на описание конфигурации карты в формате <tt>usemap="#название_карты"</tt>.         
+        Значение атрибута <tt>name</tt> тега &lt;map&gt; должно соответствовать имени в <tt>usemap</tt>. 
+        Для задания активой области картинки &lt;img&gt;, являющейся ссылкой на HTML-документ, используется тег &lt;area&gt;.
+    </p>
+    <h2>Атрибуты тега &lt;area&gt;:</h2>
+    <ul>
+        <li>
+            <strong>shape</strong><br>
+            Определяет форму активной области. Форма может быть в виде окружности (circle), прямоугольника (rect), полигона (poly).
+        </li>
+        <li>
+            <strong>alt</strong><br>
+            Добавляет альтернативный текст для каждой области. Служит лишь комментарием для ссылки, поскольку на экран не выводится.        
+        </li>
+        <li>
+            <strong>coords</strong><br>
+            Задает координаты активной области. Координаты отсчитываются в пикселах от левого верхнего угла изображения, 
+            которому соответствует значение 0,0. Первое число является координатой по горизонтали, второе — по вертикали. 
+            Список координат зависит от формы области:
+            <ol>
+                <li>
+                    Для окружности задаются три числа — координаты центра круга и радиус.
+                    <p><code>&lt;area shape="circle" coords="230,340, 100" href="circle.html"&gt;</code></p>
+                </li>
+                <li>
+                    Для прямоугольника — координаты левого верхнего и правого нижнего угла.     
+                    <p><code>&lt;area shape="rect" coords="24,18, 210,56" href="rect.html"&gt;</code></p>                    
+                </li>
+                <li>
+                    Для полигона задаются координаты его вершин.
+                    <p>
+                    <code>&lt;area shape="poly" alt="Закладка 4" <br>
+                    coords="302,27, 303,32, 394,32, 393,27, 386,9, 382,3, 375,1, 303,1, 298,2, 293,6, 295,9, 302,27" <br>
+                    href="poly.html"&gt;</code>
+                    </p>                    
+                </li>
+            </ol>
+        </li>
+        <li>
+            <strong>href</strong> <br>
+            Определяет адрес ссылки для области. Правила записи такие же, как и для тега &lt;a&gt;.        
+        </li>
+    </ul>
+    <p style="text-indent: 20px;">
+        Для удобства создания координат форм областей можно использовать сторонние ресурсы такиие как <a href="http://maschek.hu/imagemap/imgmap/">этот</a>.
+    </p>
+    <h2>Пример:</h2>
+    <p style="text-indent: 20px;">
+        При наведении и клике курсором на кекс, кофе или конфеты эта область изображения сработает как ссылка.
+    </p>
+    <p style="text-align: center;">
+        <img src="img/cupcake-candy-and-coffee-with-milk.jpg" usemap="#coffee_map" alt="Кофе, молоко, кекс и конфета">
+    </p>
+    <map name="coffee_map">
+        <area shape="circle" coords="171,305, 67" href="https://e-dostavka.by/catalog/item_744418.html" alt="Купить кексы">
+        <area shape="rect" coords="301,217, 495,405" href="http://www.kommunarka.by/catalog/konfety_s_likernymi_i_jeleynymi_nachinkami/" alt="Купить конфеты">
+        <area shape="poly" coords="191,154, 212,187, 214,246, 252,270, 291,267, 295,205, 320,156, 286,133, 253,128, 222,134, 209,145" 
+            href="https://mirespresso.by/catalog/kofe/zernovoy-kofe/" alt="Купить кофе">
+    </map>
+
+    <a href="../index.html" target=index>Вернуться к списку домашних заданий</a>
+</div>
+
+</body>
+</html>
