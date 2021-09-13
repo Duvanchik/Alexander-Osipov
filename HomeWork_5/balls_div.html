@@ -15,18 +15,42 @@
             color: blue;
             text-align: center;
         }
+        .ball_all_1 {
+            background: 
+            url("img/ball3.png") no-repeat left top,
+            url("img/ball3.png") no-repeat right top,
+            url("img/ball3.png") no-repeat left bottom,
+            url("img/ball3.png") no-repeat right bottom,
+            url('img/ball3.png') no-repeat right 100px bottom,
+            url('img/transparent_ball.png') no-repeat 20% bottom;
+        }
+        .ball_all_2 {
+            background: 
+            url("img/ball3.png") no-repeat left top,
+            url("img/ball3.png") no-repeat right top,
+            url("img/ball3.png") no-repeat left bottom,
+            url("img/ball3.png") no-repeat right bottom;
+        }
     </style>
-    <title>MAKET_DIV</title>
+    <title>BALLS_div</title>
 </head>
 <body>
-    <div>
-        <div class="header">
+
+    <!-- header block -->
+    <div class="header">
             <h1 style="padding: 14px; margin: 0px; font-size: 20px; font-weight: bold;">
                 ПРИВЕТ УЧАСТНИКАМ СОРЕВНОВАНИЙ!
             </h1>
-        </div>
-        <div style="overflow: hidden; background-color: #f0e68c;">
-            <div style="float: left; width: 180px; vertical-align: top;">
+    </div>
+
+
+    <!-- middle container -->
+    <div style="overflow: hidden; background: url(img/balls_div_BG.png) 20% top repeat-y;">
+        
+        <div class="ball_all_1">        
+
+            <!-- left block -->
+            <div style="float: left; width: 20%; vertical-align: top; background: url('img/ball3.png') right top no-repeat;">
                 <div style="display: inline-block; 
                             font-weight: bold; 
                             font-size: 20px; 
@@ -67,8 +91,21 @@
                     </li>
                 </ul>
             </div>
-            <div style="margin-left: 180px; background-color: white;">
-                <div style="background:url('img/ball.png') repeat-y right top; padding: 20px 20px 0;">
+
+
+              <!-- right block -->
+              <div style="float: right; width: 200px; background: url('img/ball3.png') left top no-repeat;">
+                <p>
+                    ipsum dolor sit amet consectetur 
+                    adipisicing elit. Culpa amet quisquam commodi mollitia explicabo, laudantium, iure fugiat voluptates incidunt 
+                    eum soluta eos blanditiis non aliquam aperiam temporibus! Facere, quas distinctio!
+                </p>
+            </div>    
+
+        
+            <!-- center block -->
+            <div class="ball_all_2" style="margin-left: 20%; margin-right: 200px; background-color: #c07475;">
+                <div style="padding: 20px 20px 0;">
                     <div style="font-weight: bold; font-size: 20px; text-align: center;">
                         ФУТБОЛ
                     </div>
@@ -88,13 +125,19 @@
                     </div>
                     <div style="clear: both;"></div>
                 </div>                
-            </div>            
+            </div>
+        
         </div>
-        <div class="footer" style="clear: both;">
-            <h2 style="padding: 14px; margin: 0px; font-size: 20px; font-weight: bold;">
-                ГЛАВНОЕ НЕ ПОБЕДА, А УЧАСТИЕ!
-            </h2>
-        </div>
+
+    </div> <!--end of middle container -->
+
+    <!--footer block -->
+    <div class="footer" style="clear: both;">
+        <h2 style="padding: 14px; margin: 0px; font-size: 20px; font-weight: bold;">
+            ГЛАВНОЕ НЕ ПОБЕДА, А УЧАСТИЕ!
+        </h2>
     </div>
+
+  
 </body>
 </html>
