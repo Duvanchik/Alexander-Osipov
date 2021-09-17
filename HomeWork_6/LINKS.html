@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* общие стили: */
+        a:hover {
+            color: red !important;
+        }
+        div {
+            font-size: 14px;            
+        }
+        a {
+            color: green;
+            padding: 5px 10px 10px 10px;
+        }
+        /* стили для первого варианта меню: */
+        div.menu1 a {
+            border-right: solid red 3px; 
+        }
+        div.menu1 a:first-child {
+            padding: 5px 10px 10px 0
+        }
+        div.menu1 a:last-child {
+            border-right: none;
+            padding: 0 10px 0 10px;
+        }
+        /* стили для второго варианта меню: */
+        div.menu2 a {
+            border-left: solid red 3px; /*теперь разделитель проходит по левой границе элемента А*/
+        }
+        div.menu2 a:first-child {
+            border-left: none;
+            padding: 5px 10px 10px 0
+        }
+        /* стили для третьего варианта меню: */
+        div.menu3 a {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        div.menu3 a::after {
+            content: "|";
+            color: red;
+            text-decoration: none;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        div.menu3 a:first-child {
+            padding: 5px 10px 10px 0
+        }
+        div.menu3 a:last-child {
+            border-right: none;
+            padding: 0 10px 0 10px;
+        }
+        div.menu3 a:last-child::after {
+            content: none;
+        }
+    </style>
+    <title>MENU_LINKS</title>
+</head>
+<body> 
+    <!-- Исходное меню -->
+    <div class="start_menu" style="font-size: 14px">
+        <a style="color: green; border-right: solid red 3px; padding: 5px 10px 10px 0" href="a">первая ссылка</a>
+        <a style="color: green; border-right: solid red 3px; padding: 5px 10px 10px 10px" href="a">вторая ссылка</a>
+        <a style="color: green; border-right: solid red 3px; padding: 5px 10px 10px 10px" href="a">третья ссылка</a>
+        <a style="color: green; border-right: solid red 3px; padding: 5px 10px 10px 10px" href="a">четвёртая ссылка</a>
+        <a style="color: green; padding: 0 10px 0 10px" href="a">пятая !ссылка</a>
+    </div>
+    <br>
+    <br>
+    <!-- Первый вариант стилизации меню -->
+    <div class="menu1">
+       <a href="a">первая ссылка</a>
+       <a href="a">вторая ссылка</a>
+       <a href="a">третья ссылка</a>
+       <a href="a">четвёртая ссылка</a>
+       <a href="a">пятая ссылка</a>
+    </div>
+    <br>
+    <br>
+    <!-- Второй вариант стилизации меню -->
+    <div class="menu2">
+       <a href="a">первая ссылка</a>
+       <a href="a">вторая ссылка</a>
+       <a href="a">третья ссылка</a>
+       <a href="a">четвёртая ссылка</a>
+       <a href="a">пятая ссылка</a>
+    </div>
+    <br>
+    <!-- Третий вариант стилизации меню -->
+    <div class="menu3">
+       <a href="a">первая ссылка</a>
+       <a href="a">вторая ссылка</a>
+       <a href="a">третья ссылка</a>
+       <a href="a">четвёртая ссылка</a>
+       <a href="a">пятая ссылка</a>
+    </div>
+    <br>
+    <br>
+    <a href="../index.html" target=index>Вернуться к списку домашних заданий</a>
+</body>
+</html>
