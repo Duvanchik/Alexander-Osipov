@@ -40,7 +40,9 @@
     background-color: white;
 }
 .content_background {
-    background:url('img/ball.png') repeat-y right top;    
+    background-image: url('img/ball.png');
+    background-repeat: repeat-y;
+    background-position: right top;    
 }
 .content_header {
     font-weight: bold; 

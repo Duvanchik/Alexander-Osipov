@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .user_device{
+            border: solid 5px red;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        .image{
+            position: absolute;
+            margin: auto;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="user_device">
+        <pictures>
+            <source
+                srcset="img/cake_small.jpg 200w,
+                        img/cake_medium.jpg 600w,
+                        img/cake_big.jpg 1000w"
+                sizes="(max-width: 700px) 500px,
+                        (max-width: 600px) 400px,
+                        100vw">
+            <img src="img/cake_medium.jpg" alt="cake" class="image">
+        </picture>
+    </div>
+</body>
+</html>
