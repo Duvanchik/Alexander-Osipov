@@ -5,35 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .user_device{
-            border: solid 5px red;
-            width: 100vw;
-            height: 100vh;
-            position: relative;
+        h1{
+            text-align: center;
         }
-        .image{
-            position: absolute;
-            margin: auto;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            right: 0;
+        .user_device{
+            height: 100vh;
+            width: 100vw;
+            margin: 20px;
+            border: solid violet 3px;
+            background-color: lightskyblue;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        img{
+            display: block;            
+            margin-left: auto;
+            margin-right: auto;
+        
+            max-width: 100%; 
+           
+        }
+        @media all and (min-width: 900px){
+            picture img{
+                float: left;
+                margin: 10px;
+            }
         }
     </style>
     <title>Document</title>
 </head>
 <body>
     <div class="user_device">
-        <pictures>
+        <h1>Тег picture</h1>
+        <picture>
+            <!-- <source
+                type="image/webp" 
+                srcset="img/shakal_wide_webp.webp 1270w,
+                        img/shakal_narrow_webp.webp 670w"
+                sizes="(min-width: 900px) 50wv,
+                       100vw"> -->
             <source
-                srcset="img/cake_small.jpg 200w,
-                        img/cake_medium.jpg 600w,
-                        img/cake_big.jpg 1000w"
-                sizes="(max-width: 700px) 500px,
-                        (max-width: 600px) 400px,
-                        100vw">
-            <img src="img/cake_medium.jpg" alt="cake" class="image">
+                media="(max-width: 899px)" 
+                srcset="img/shakal_wide_1270w.jpg 1270w,
+                        img/shakal_wide_960w.jpg 960w,
+                        img/shakal_wide_480w.jpg 480w">
+            <source   
+                sizes="(max_width: 1000px) 30vw,   
+                        50vw"         
+                srcset="img/shakal_narrow_670w.jpg 670w,
+                        img/shakal_narrow_502w.jpg 502w,
+                        img/shakal_narrow_335w.jpg 335w"
+                >
+            <img src="img/shakal_wide_1270w.jpg" alt="шакал джипег">
         </picture>
+        <p>
+            Тег &lt;picture&gt; позволяет выбрать наиболее рациональное по своему качеству (разрешению) изображение для устройства на котором оно будет
+            отображаться, а также позволяет решить проблему художественного оформления на web-странице: например когда широкое изображение
+            при сужении области видимости (viewport) уменьшается и становится плохочитаемым, то его при определенной ширине viewport 
+            необходимо заменить на заранее подготовленное, но более узкое, которое будет смотреться на узком экране гораздо лучше. Также &lt;picture&gt; может
+            использоваться для отображения в браузере картинок подходящего формата благодаря возможности задания в одном тэге нескольких атрибутов &lt;source&gt;.
+            <br>
+            Ознакомиться с работой этого тега можно на данной страничке зайдя в инструменты разработчика и воспользовавшись инструментом 
+            device tool bar. При просмотре страницы в Google Chrome следует также отключить в инструментах разработчика отключить кэш на 
+            вкладке Network или вручную обновлять сраницу с очисткой кэша при изменении ширины viewport для более наглядной работы тега. Это связано с 
+            тем, что Chrome, когда загрузит более качественное изображение при, например, расширении viewport не станет возвращать изображение 
+            с меньшим разрешением при сужении области видимости в изначальное состояние.
+        </p>
     </div>
+
+        
+
 </body>
 </html>
