@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-size: 4mm;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .user_device{
+            border: double red 3px;
+            width: 100vw;
+            padding: 10px;
+            margin-bottom: 10px;
+            margin-right: 15px;
+            margin-top: 10px;            
+        }
+        
+        textarea, input#article_name{
+            width: 100%;
+        }
+        form > label:first-of-type{
+            display: block; 
+            width: 185px; 
+            float: left;
+        }
+        form >  div:first-of-type{
+            margin-left: 185px;
+            margin-bottom: 5px;
+        }
+        form > div:nth-of-type(2){
+            width: 185px; 
+            float: left;
+        }
+        select{
+            display: block;
+            margin-left: 185px;
+            margin-bottom: 5px;
+        }
+        form > div:nth-of-type(3){
+            width: 185px; 
+            float: left;
+        }
+        .HowToPublic{
+            margin-bottom: 5px;
+        }
+        .HowToPublic div{
+            display: inline-block;
+        }
+        input[type="radio"]{
+            margin: 0px;
+        }
+        .HowToPublic label{
+            margin-right: 3px;
+        }
+        form div:last-of-type{
+            margin-bottom: 5px;
+        }
+        input[type="submit"]{
+            margin-top: 3px;
+        }
+        
+        @media screen and (max-width: 536px) {
+            form > label:first-of-type{
+                display: block; 
+                width: auto; 
+                float: none;
+            }
+            form >  div:first-of-type{
+                margin-left: 0px;
+                margin-bottom: 5px;
+            }
+            form > div:nth-of-type(2){
+                width: auto; 
+                float: none;
+            }
+            select{
+                display: block;
+                margin-left: 0px;
+                margin-bottom: 5px;
+                width: 100%;
+            }
+            form > div:nth-of-type(3){
+                width: auto; 
+                float: none;
+            }
+            .HowToPublic div{
+                display: block;
+                margin-top: 5px;
+            }
+        }
+    </style>
+    <title>MAKET_FORM</title>
+</head>
+<body>
+    <div  class="user_device">
+
+        <p>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</p>
+
+        <form action="http://fe.it-academy.by/TestForm.php" method="POST" target="_blank">
+
+            <label for="article_name">Название статьи:</label>
+            <div>
+                <input type="text" id="article_name" name="article_name">
+            </div>    
+            
+
+            <div>Рубрика:</div>
+            <select name="heading">
+                <option value="computer_tech">компьютерная техника</option>
+                <option value="graphics_&_desing">графка и дизайн</option>
+                <option value="programming" selected>программирование</option>
+            </select> 
+            
+
+            <div>Публикаця:</div>
+            <div class="HowToPublic">
+                <div>
+                    <input type="radio" id="site" name="publication" value="on_site">
+                    <label for="site">на сайте</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="journal" name="publication" value="journal">
+                    <label for="journal">в журнале</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="s&j" name="publication" value="site_&_journal">
+                    <label for="s&j">на сайте и в журнале</label>
+                </div>
+            </div>
+                
+            <div>
+                <label for="coments_on">Разрешить комментарии:</label>
+                <input type="checkbox" id="coments_on" name="comments" value="comments_on" checked>
+            </div>
+
+            <label for="article">Текст статьи:</label>  
+            <br>          
+                <textarea name="article" id="article"></textarea>
+            <br>
+            <input type="submit" value="Опубликовать">
+
+        </form>
+
+    </div>
+</body>
+</html>
