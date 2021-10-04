@@ -1,0 +1,60 @@
+.header, .footer {
+    height: auto;
+    background-color: #add8e6;            
+    color: blue;
+    text-align: center;
+}
+.header h1 {
+    padding: 14px; 
+    margin: 0px; 
+    font-size: 20px; 
+    font-weight: bold;
+}
+.footer h2 {
+    padding: 14px; 
+    margin: 0px;
+    font-size: 20px; 
+    font-weight: bold;
+    clear: both;
+}
+
+.container {
+    overflow: hidden; 
+    background-color: #f0e68c;
+}
+.menu {
+    float: left; 
+    width: 180px; 
+    vertical-align: top;
+}
+.menu_header {
+    display: inline-block; 
+    font-weight: bold; 
+    font-size: 20px; 
+    margin-left: 7px; 
+    margin-top: 20px;
+}
+.content {
+    margin-left: 180px; 
+    padding: 20px 20px 0;
+    background-color: white;
+}
+.content_background {
+    background-image: url('img/ball.png');
+    background-repeat: repeat-y;
+    background-position: right top;    
+}
+.content_header {
+    font-weight: bold; 
+    font-size: 20px; 
+    text-align: center;
+}
+.content_pic {
+    float: left; 
+    margin: 0 20px 20px 0;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
