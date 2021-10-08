@@ -16,6 +16,7 @@
         
         textarea, input#article_name{
             width: 100%;
+            box-sizing: border-box;
         }
         form > label:first-of-type{
             display: block; 
@@ -44,18 +45,42 @@
         }
         .HowToPublic div{
             display: inline-block;
+            vertical-align: middle;
+
         }
         input[type="radio"]{
             margin: 0px;
+            vertical-align: middle;
+        }
+        input[type="checkbox"]{
+            vertical-align: middle;
         }
         .HowToPublic label{
             margin-right: 3px;
         }
-        form div:last-of-type{
+        form > div:last-of-type{
             margin-bottom: 5px;
         }
         input[type="submit"]{
             margin-top: 3px;
+        }
+        label, input{
+            cursor: pointer;
+        }
+        input[type="text"]{
+            cursor: auto;
+        }
+        input#coments_on{
+            visibility: hidden;           
+        }
+        input#coments_on::after{
+            content: url('img/switch-off.png');
+            visibility: visible;
+            position: relative;
+            bottom: 5px;                  
+        }
+        input#coments_on:checked::after{
+            content: url('img/switch-on.png');                  
         }
 
         @media screen and (max-width: 536px) {
