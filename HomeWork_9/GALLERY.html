@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .view_body{
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(blue, pink) no-repeat;
+            background-attachment: fixed;
+            overflow-y: auto;           
+                        
+        }
+        .video_gallery{
+            width: 600px;
+            height: 700px;
+            /* margin: 0 auto; */
+            background: mistyrose;
+            border: solid 5px gray;
+            overflow: scroll;
+            position: absolute;
+            left: calc(50% - 300px);
+            top: calc(50% - 350px);            
+        }
+        .ytp-button{
+            display: none;
+        }
+        h1{
+            text-align: center;
+        }
+        #fun-block{
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            border:solid 120px;
+            border-image: url(img/rainbow-frog.gif);
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="view_body">
+        <div id="fun-block"></div>
+        <div class="video_gallery">
+            <h1>Программирование - это серьезно!</h1>
+            <!-- Чтобы включить панель управления проигрывателем - нужно удалить из адреса ссылки на видео часть строки "?controls=0" -->
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/edTVrVOdQOc?controls=0" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            <a href="https://www.youtube.com/embed/edTVrVOdQOc?controls=0">смотреть видео в отдельном окне</a>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/plEwInSiqgw?controls=0"
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            <a href="https://www.youtube.com/embed/plEwInSiqgw?controls=0">смотреть видео в отдельном окне</a>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/HzbH2UfArp4?controls=0" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            <a href="https://www.youtube.com/embed/HzbH2UfArp4?controls=0">смотреть видео в отдельном окне</a>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/g94j-ahVR78?controls=0" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            <a href="https://www.youtube.com/embed/g94j-ahVR78?controls=0">смотреть видео в отдельном окне</a>
+        </div>
+    </div>
+
+</body>
+</html>
