@@ -9,20 +9,32 @@
             box-sizing: border-box;
         }
         @keyframes cont_anim{
-            
+            to {
+                border-color: yellow;
+                border-width: 30px;
+
+            }
         }
         .container{
             display: inline-block;
             width: 500px;
             height: 500px;
+            /* box-sizing: content-box; */
             border: solid red 10px;
             background: linear-gradient(45deg, yellow, blue);
             position: absolute;
             left: calc(50% - 250px);
             top: calc(50% - 250px);
-            bottom: 200px;
+            bottom: 200px;            
         }
-       
+        .container:hover{
+            animation: cont_anim 1s infinite;
+        }
+
+        @keyframes anim_sprite{
+            from { background: url("img/sprite_pic.png") 0 0; }
+            to { background: url("img/sprite_pic.png") -900px 0;  }
+        }
         .sprite_pic{
             background-image: url("img/sprite_pic.png");
             background-size: contain;    
@@ -34,9 +46,11 @@
             top: calc(50% - 75px);
             animation: anim_sprite 1s steps(6) infinite;
         }
-        @keyframes anim_sprite{
-            from { background: url("img/sprite_pic.png") 0 0; }
-            to { background: url("img/sprite_pic.png") -900px 0;  }
+        
+        @keyframes frog_anim {
+            from {transform: rotate(-10deg);}
+            50% {transform: rotate(10deg);}
+            to {transform: rotate(-10deg);}            
         }
         .frog{
             background-image: url("img/rainbow-frog.gif");
@@ -44,10 +58,19 @@
             background-size: contain;
             height: 150px;
             width: 150px;
-            /* display: none; */
+            display: none;
             transform-origin: center center;            
             position: absolute;
             top: 38%;
+            animation: frog_anim 1s infinite;
+        }
+        .container:hover .frog{
+            display: inline-block;
+            animation: frog_anim 1s infinite;
+        }
+        @keyframes text_anim {
+            50%{border: yellow dashed 10pxpx;}
+            
         }
         .text{
             display: inline-block;
@@ -64,6 +87,7 @@
             position: absolute;
             top: 71%;
             left: 20px;
+            animation: text_anim 1s infinite;
         }
         .slon{
             display: inline-block;
