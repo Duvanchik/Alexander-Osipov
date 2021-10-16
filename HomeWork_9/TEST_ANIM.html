@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        @keyframes cont_anim{
+            
+        }
+        .container{
+            display: inline-block;
+            width: 500px;
+            height: 500px;
+            border: solid red 10px;
+            background: linear-gradient(45deg, yellow, blue);
+            position: absolute;
+            left: calc(50% - 250px);
+            top: calc(50% - 250px);
+            bottom: 200px;
+        }
+       
+        .sprite_pic{
+            background-image: url("img/sprite_pic.png");
+            background-size: contain;    
+            background-repeat: no-repeat;       
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            left: calc(50% - 75px);
+            top: calc(50% - 75px);
+            animation: anim_sprite 1s steps(6) infinite;
+        }
+        @keyframes anim_sprite{
+            from { background: url("img/sprite_pic.png") 0 0; }
+            to { background: url("img/sprite_pic.png") -900px 0;  }
+        }
+        .frog{
+            background-image: url("img/rainbow-frog.gif");
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 150px;
+            width: 150px;
+            /* display: none; */
+            transform-origin: center center;            
+            position: absolute;
+            top: 38%;
+        }
+        .text{
+            display: inline-block;
+            width: 100px;
+            height: auto;
+            padding: 15px;
+            text-align-last: center;
+            background: orangered;
+            border: orchid dashed 5px;
+            text-decoration-line: overline;
+            color: blue;
+            font-weight: bold;
+            font-size: 16px;            
+            position: absolute;
+            top: 71%;
+            left: 20px;
+        }
+        .slon{
+            display: inline-block;
+            height: 50px;
+            background: green;
+            border: brown solid 5px;
+            text-align: center;
+            line-height: 20px;
+            padding: 10px;
+            color: gray;            
+            position: absolute;
+            right: 10px;
+            bottom: 50%;
+        }
+        @keyframes frog_transform{
+            from { transform: rotate(-25deg);  }
+            to { background: url("img/sprite_pic.png") -900px 0;  }
+        }
+    </style>
+    <title>Animation_tes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sprite_pic"></div>
+        <div class="frog"></div>
+        <p class="text">Хоба!</p>
+        <div class="slon">Купи СЛОНА!!!</div>
+    </div>
+</body>
+</html>
