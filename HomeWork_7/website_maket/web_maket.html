@@ -26,9 +26,9 @@
     <title>web_maket</title>
 </head>
 <body>
-    <div class="footer">
-        <div class="container vert_spacer">
-            <!-- <span class="spanvmiddle"></span> -->
+    <!-- Здесь размечен футер - верхняя часть сайта  -->
+    <div class="footer">        
+        <div class="container vert_spacer">            
             <div class="left_footer_bar footer_text_style_1">
                 <a href="https://ru.wikipedia.org/">Доставка и оплата</a>
                 <a href="https://ru.wikipedia.org/">Отзывы</a>
@@ -43,6 +43,9 @@
             </div>
         </div>
     </div>
+    <!-- Футер закончен -->
+
+    <!-- Наинаем сабфутер, где размещены лого, поиск по сайту и контакты + ниже ссылки на группы товаров -->
     <div class="container">
         <div class="header_1 vert_spacer">
             <img src="img/shop_logo.svg" alt="shop_logo">
@@ -56,11 +59,47 @@
                 <br>
                 <span>Сб - вс выходной</span>
             </div>
-            <form action="http://fe.it-academy.by/TestForm.php" method="get" name="search">
-                <input type="text" placeholder="Поиск">
-            </form>
-            
+            <form action="http://fe.it-academy.by/TestForm.php" method="get">
+                <input type="text" placeholder="Поиск" name="search_query">
+            </form>            
         </div>
+
+        <!-- Ссылки на группы товаров  -->
+        <div class="header_2">
+            <!-- Блок-обертка только для селектора групп товаров. К нему прикручена стилизованная серая полоса-->
+            <div class="product_selection">
+                <label>
+                    <input type="radio" name="product_check" value="tea">
+                    <span>Чай</span>
+                    <div class="prod_underscore"></div>
+                </label>
+                <label>                    
+                    <input type="radio" name="product_check" value="coffee">
+                    <span>Кофе</span>
+                    <div class="prod_underscore"></div>
+                </label>
+                <label>                    
+                    <input type="radio" name="product_check" value="sweet">
+                    <span>Сладенькое</span>
+                    <div class="prod_underscore"></div>
+                </label>
+                <label>                    
+                    <input type="radio" name="product_check" value="atributes">
+                    <span>Атрибуты</span>
+                    <div class="prod_underscore"></div>
+                </label>
+                <label>                    
+                    <input type="radio" name="product_check" value="sets">
+                    <span>Наборы</span>
+                    <div class="prod_underscore"></div>
+                </label>
+                <label>                    
+                    <input type="radio" name="product_check" value="promotions">
+                    <span>Акции</span>
+                    <div class="prod_underscore"></div>
+                </label>
+            </div>
+        </div>    
     </div>
         
 </body>
