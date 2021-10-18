@@ -1,3 +1,5 @@
+/* свойства типа Reset_normalize css */
+
 *{
     margin: 0;
     padding: 0;
@@ -13,6 +15,8 @@ input[type="text"]{
 a{
     text-decoration: none;   
 }
+/* свойства типа Reset css */
+
 .footer{
     height: 81px;
     background-color: #669966;
@@ -21,16 +25,19 @@ a{
     max-width: 1200px;
     height: 100%;
     margin: 0 auto; 
-    border: solid red 2px; /* по окончании верстки границу убрать*/
+    /* border: solid red 2px; по окончании верстки границу убрать */
 }
-.vert_spacer::before{ /* этот элемент добавлен для вертикального выравнивания. В конце убрать границу, чтоб был невидим*/
+
+/* этот элемент добавлен для вертикального выравнивания. В конце убрать границу, чтоб был невидим*/
+
+.vert_spacer::before{ 
     content: "";
     display: inline-block;
     height: 100%;
     width: 0;
     overflow: hidden;
     vertical-align: middle;
-    border-right: 1px solid black;
+    border-right: 3px solid blueviolet;
 }
 .left_footer_bar{
     display: inline-block;
@@ -128,6 +135,8 @@ input[name="search_query"]{
 .header_2 label:last-of-type{
     padding-right: 0px;
 }
+/* тег <a> поменять на <span> */
+
 .header_2 span{    
     font-family: Open Sans;
     font-weight: normal;
@@ -153,6 +162,8 @@ input[name="product_check"]:checked ~ div.prod_underscore::after{
     position: relative;
     display: inline-block;
 }
+/* Серая полоска под списком групп продуктов */
+
 .product_selection::after{    
     content: "";
     display: inline-block;
@@ -165,6 +176,19 @@ input[name="product_check"]:checked ~ div.prod_underscore::after{
     border-radius: 26px;
     z-index: -1;
 }
+/* тег <a> поменять на <span> */
+
 input[name="product_check"]:checked + span{
     font-weight: 600;
 }
+
+/* Футер закончен - начинается информационный баннер */
+
+.banner_info_1{
+    max-width: 1400px;
+    height: 516px;
+    margin: 0 auto;
+    border: 1px solid red;
+    background: url("/HomeWork_7/website_maket/img/Tea_Time/bg_banner1_1x.jpg");
+}
+/* проблема с background */
