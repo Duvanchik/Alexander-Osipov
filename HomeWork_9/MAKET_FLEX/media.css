@@ -1,0 +1,32 @@
+@media all and (max-width: 470px) {
+    
+    .container {
+        flex-direction: column;
+        /* overflow: hidden;  */
+        background-color: #f0e68c;
+    }
+    .menu {
+        flex: 1 1 auto; 
+        order: 2;
+        text-align: center;
+    }
+    .content {
+        flex: 1 1 auto;
+        order: 1;
+        padding: 20px 20px 0;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+    }
+    .content_pic {
+        flex: 1 1 auto;
+        float: none; 
+
+        height: 56vw;
+        width: 100%;
+        background-image: url("img/footballTeam.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 5px 0 0 5px;
+    }
+}
