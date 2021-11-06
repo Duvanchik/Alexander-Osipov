@@ -37,7 +37,7 @@ a{
     width: 0;
     overflow: hidden;
     vertical-align: middle;
-    border-right: 3px solid blueviolet;
+    /* border-right: 3px solid blueviolet; */
 }
 .left_footer_bar{
     display: inline-block;
@@ -94,7 +94,7 @@ img[alt="shop_logo"]{
 div img[alt="phone_logo"]{
     vertical-align: middle;
 }
-.contact_1 span.phone_number_1{  
+.contact_1 a.phone_number_1{  
     font-family: Open Sans;
     font-weight: 600;
     font-size: 16px;
@@ -106,7 +106,7 @@ div img[alt="phone_logo"]{
                 rgba(0, 0, 0, 0.25);
     vertical-align: middle;
 }
-form{
+form.main_search{
     float: right;
 }
 input[name="search_query"]{
@@ -130,16 +130,19 @@ input[name="search_query"]{
 
 /* Начало стилизации селектора групп товаров */
 
-.header_2 label{
+.product_selection{    
+    position: relative;
     display: inline-block;
+}
+.header_2 a{
+    display: inline-block;
+    position: relative;
     vertical-align: top;
     padding-right: 55px;
 }
-.header_2 label:last-of-type{
+.header_2 a:last-of-type{
     padding-right: 0px;
 }
-/* тег <a> поменять на <span> */
-
 .header_2 span{    
     font-family: Open Sans;
     font-weight: normal;
@@ -147,10 +150,7 @@ input[name="search_query"]{
     line-height: 29px;
     color: #636363;
 }
-input[name="product_check"]{
-    display: none;
-}
-input[name="product_check"]:checked ~ div.prod_underscore::after{
+div.prod_underscore:target::after, div.prod_underscore:hover::after{
     content: "";
     display: inline-block;
     width: 100%;
@@ -161,13 +161,11 @@ input[name="product_check"]:checked ~ div.prod_underscore::after{
     background: #669966;
     border-radius: 26px;
 }
-.product_selection{    
-    position: relative;
-    display: inline-block;
+div.prod_underscore:target > span{
+    font-weight: 600;
 }
 
 /* Серая полоска под списком групп продуктов */
-
 .product_selection::after{    
     content: "";
     display: inline-block;
@@ -180,11 +178,7 @@ input[name="product_check"]:checked ~ div.prod_underscore::after{
     border-radius: 26px;
     z-index: -1;
 }
-/* тег <a> поменять на <span> */
 
-input[name="product_check"]:checked + span{
-    font-weight: 600;
-}
 /* Конец стилизации селектора групп товаров */
 
 /* Футер закончен - начинается информационный баннер */
@@ -194,31 +188,53 @@ input[name="product_check"]:checked + span{
     max-width: 1400px;
     height: 516px;
     margin: 0 auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    /* Убрать границу по окончанию верстки */
     background-image: url("../img/Tea_Time/bg_banner1_1x.jpg");
     background-repeat: no-repeat;
     background-position-y: -133px;
+    margin-bottom: 120px;
 }
-.banner1_header{
+.banner_description{
     position: absolute;    
-    left: 300px;
-    top: 137px;
+    left: 20%;
+    top: 50%;
+    transform: translate(0, -50%);
+    max-width: 600px;
+}
+.banner_description h2{   
     font-family: Open Sans;
     font-weight: bold;
     font-size: 40px;
     line-height: 54px;
     color: #3F3F3F;
 }
-.banner1_description{
-    display: inline-block;
-    position: absolute;
-    width: 389px;
-    left: 303px;
-    top: 207px;
+.banner_description p{
     font-family: Open Sans;
     font-size: 18px;
     line-height: 25px;
     color: #999999;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+.banner_description div{
+    display: inline-block;
+    width: 305px;
+    height: 53px;
+}
+.green_button{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    
+    background: #669966;
+    border-radius: 42px;
+
+    font-family: Open Sans;
+    font-size: 18px;
+    line-height: 53px;
+    color: #FFFFFF;
+    text-align: center;
 }
 .switch_arrow_L{
     position: absolute;
@@ -246,45 +262,303 @@ input[name="product_check"]:checked + span{
     border-top: solid 2px #696969;
     border-radius: 2px;
 }
-.green_button{
-    display: inline-block;    
-    position: absolute;
-    width: 305px;
-    height: 53px;
-    left: 303px;
-    bottom: 100px;
-    background: #669966;
-    border-radius: 42px;
-
-    font-family: Open Sans;
-    font-size: 18px;
-    line-height: 53px;
-    color: #FFFFFF;
-    text-align: center;
-    vertical-align: middle;
-}
 
 /* Стилизуем селектор баннеров - четыре точки внизу баннера */
 
 .banner_selection{    
     position: absolute;
     display: inline-block;
-    height: 14px;
+    height: auto;
     bottom: 30px;
-    left: 655px;
+    left: 50%;
+    transform:translate(-50%, 0%);
 }
-input[name="banner_selection"]{
-    display: none;
-}
-input[name="banner_selection"]:checked ~ div.banner_circle_check::after{
-    content: "";
+
+div.banner_circle_check{
+    vertical-align: middle;
     display: inline-block;
-
-    width: 100%;
-    height: 5px;
-    position: relative;
-    top: 10px;
-
-    background: #669966;
-    border-radius: 26px;
+    margin: 0 10px 0 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background: #DBDBDB;    
 }
+div.banner_circle_check:target{   
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background: #C4C4C4;    
+}
+/*Конец информационного баннера */
+
+/* Начало стильного каталога продукции */
+h2{
+    margin-bottom: 37px;    
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 33px;
+    line-height: 45px;
+    text-align: center;
+    color: #3F3F3F;
+}
+.catalog_main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -20px;
+    margin-bottom: 150px;
+}
+.catalog_main div{
+    height: 323px;
+    flex: 1 1 auto;
+    margin: 0 20px 16px 0;
+    filter: drop-shadow(-10px -10px 20px 
+            rgba(245, 245, 245, 0.7)) 
+            drop-shadow(10px 10px 20px 
+            rgba(245, 245, 245, 0.7));
+            
+    border-radius: 20px;
+    /* border: solid red 1px; */
+    /* Убрать границу по окончанию верстки */
+}
+
+.catalog_main > div:nth-child(1){
+   flex-basis: 793px; 
+   background-image: url("../img/CatalogMain_Tea.jpg");
+   background-repeat: no-repeat;
+   background-position: -205px -100px;
+}
+.catalog_main > div:nth-child(2){
+   flex-basis: 387px; 
+   background-image: url("../img/CatalogMain_Coffe.jpg");
+   background-repeat: no-repeat;
+   background-position: -600px -95px;
+}
+.catalog_main > div:nth-child(3){
+   flex-basis: 387px; 
+   background-image: url("../img/CatalogMain_Sweets.jpg");
+   background-repeat: no-repeat;
+   background-position: 10px ​-155px;
+}
+.catalog_main > div:nth-child(4){
+   flex-basis: 488px; 
+   background-image: url("../img/CatalogMain_Attributes.jpg");
+   background-repeat: no-repeat;
+   background-position: -360px -250px;
+}
+.catalog_main > div:nth-child(5){
+   flex-basis: 285px; 
+   background-image: url("../img/CatalogMain_Promotions.png");
+   background-repeat: no-repeat;
+   background-position: -110px 35px;
+   background-color: #FFFFFF;;
+}
+
+.catalog_main > div > a{ 
+    display: block;
+    height: 100%;
+    padding-top: 24px;
+    padding-left: 38px;
+
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 37px;
+   
+    color: #3F3F3F;
+}
+/* Конец блока каталога продукции */
+
+/* Начало блока лучших товаров */
+
+.best_items{
+    margin: 0 -10px 0;
+}
+/* Стиль карточки продукта */
+    
+.product_card{
+    display: inline-block;
+    width: 285px;
+    height: 555px;
+    margin: 10px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    background-color: #FFFFFF;
+    box-shadow: -10px -10px 20px rgba(245, 245, 245, 0.7), 10px 10px 20px rgba(245, 245, 245, 0.7);
+    border-radius: 20px;
+}
+.product_card > div:nth-child(1){
+    font-size: 26px; 
+    color: #999999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 16px;
+}
+.product_card > div:nth-child(1) > span > span{
+    font-family: Open Sans;
+    font-size: 18px;
+    line-height: 25px;
+    color: #999999;
+    opacity: 0.6;
+}
+.product_card > div:nth-child(1) > span > i{
+    font-size: 26px;
+    color: #669966;
+    margin-right: 6px;
+}
+.product_card > div.product_image{
+    height: 153px;
+    width: 162px;
+    /* background-color: blueviolet; */
+    /* Убрать цвт фона по окончанию верстки */
+    margin: 0 auto;
+}
+.product_card > div:nth-child(3){
+    padding: 0 23px;
+    margin: 40px 0 27px;
+}
+.product_card > div:nth-child(3) > p:nth-child(1){
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 29px;
+    margin-bottom: 16px;
+    color: #3F3F3F;
+}
+.product_card > div:nth-child(3) > p:nth-child(2){
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 2px;
+    color: #999999;
+}
+.product_card > div:nth-child(3) > p:nth-child(3){
+    font-family: Open Sans;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 15px;
+    color: #999999;
+}
+.product_card > div:nth-child(3) > p:nth-child(4) > span:nth-child(1){
+    font-family: Open Sans;
+    font-size: 18px;
+    line-height: 25px;
+    margin-right: 8px;
+    color: #3F3F3F;
+}
+.product_card > div:nth-child(3) > p:nth-child(4) > span:nth-child(2){
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 29px;
+    margin-right: 8px;
+    color: #3F3F3F;
+}
+.product_card > div:nth-child(3) > p:nth-child(4) > span:nth-child(3){
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 29px;
+    color: #E44C50;
+}
+div.product_card > div:nth-child(3) > p:nth-child(4) > span:nth-child(2).old_price{
+    font-family: Open Sans;
+    font-size: 18px;
+    line-height: 25px;
+    text-decoration-line: line-through;
+    color: #999999;
+}
+.product_card div:last-child{
+    width: 239px;
+    height: 53px;
+    margin: 27px auto 34px;
+}
+
+.product_card:nth-child(1) > .product_image{
+    background-image: url("../img/Item1_shou_mei.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.product_card:nth-child(2) > .product_image{
+    background-image: url("../img/item2_unnan_un.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.product_card:nth-child(3) > .product_image{
+    background-image: url("../img/item3_bai_mu_dan.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.product_card:nth-child(4) > .product_image{
+    background-image: url("../img/item4_lushan_un.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Конец стиля карточки продукта */
+
+/* Стилизуем стрелки для прокрутки блоков лучших товаров и акций*/
+.switch_group2{
+    text-align: end;
+    margin: 55px 10px 0;
+}
+.switch_group2 a:first-of-type > div{
+    margin-right: 51px;
+}
+.switch_circle2{
+    display: inline-block;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #669966;
+    border-radius: 22px;
+}
+.switch_arrow2_L{
+    position: absolute;
+    left: calc(50% - 4px);
+    top: calc(50% - 6px);
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+   
+    transform: rotate(45deg);
+
+    border-left: solid 2px #696969;
+    border-bottom: solid 2px #696969;
+    border-radius: 2px;
+}
+.switch_arrow2_R{        
+    position: absolute;
+    left: calc(50% - 8px);
+    top: calc(50% - 6px);
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+   
+    transform: rotate(45deg);
+
+    border-right: solid 2px #696969;
+    border-top: solid 2px #696969;
+    border-radius: 2px;
+}
+
+/* Конец стиля стрелок для прокрутки блоков лучших товаров и акций*/
+
+/* Стилизуем второй блок с лучшими товарами - Акционные товары. Изменились только фоновые изображения */
+div.best_items.promotion_cards > div.product_card:nth-child(1) div.product_image{
+    background-image: url("../img/item5_lu_an_hei_cha.jpg");
+    background-size: contain;
+}
+div.best_items.promotion_cards > div.product_card:nth-child(2) div.product_image{
+    background-image: url("../img/item4_lushan_un.png");
+}
+div.best_items.promotion_cards > div.product_card:nth-child(3) div.product_image{
+    background-image: url("../img/Item1_shou_mei.png");
+}
+div.best_items.promotion_cards > div.product_card:nth-child(4) div.product_image{
+    background-image: url("../img/item2_unnan_un.png");
+}
+/* Конец блока акционных товаров */
