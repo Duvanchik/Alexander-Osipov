@@ -30,16 +30,16 @@
 </head>
 <body>
 
-    <!-- Здесь размечен футер - верхняя часть сайта  -->
-    <div class="footer">        
+    <!-- Здесь размечен хэдер - верхняя часть сайта  -->
+    <div class="header">        
         <div class="container vert_spacer">            
-            <div class="left_footer_bar footer_text_style_1">
+            <div class="left_header_bar header_text_style_1">
                 <a href="#Delivery&payment" title="Доставка и оплата">Доставка и оплата</a>
                 <a href="#Reviews" title="Отзывы">Отзывы</a>
                 <a href="#AboutUs" title="О магазине">О магазине</a>
                 <a href="#Contacts" title="Контакты">Контакты</a>
             </div>
-            <div class="right_footer_bar footer_text_style_2">
+            <div class="right_header_bar header_text_style_2">
                 <a href="#LogInAccount" title="Вход">Вход</a>
                 <span class="rectangle_1"></span>
                 <a href="#RegisterNew" title="Регистрация">Регистрация</a>
@@ -47,9 +47,9 @@
             </div>
         </div>
     </div>
-    <!-- Футер закончен -->
+    <!-- Хэдер закончен -->
 
-    <!-- Наинаем сабфутер, где размещены лого, поиск по сайту и контакты + ниже ссылки на группы товаров -->
+    <!-- Наинаем сабхэдер, где размещены лого, поиск по сайту и контакты + ниже ссылки на группы товаров -->
     <div class="container">
         <div class="header_1 vert_spacer">
             <a href="web_maket.html" title="Главная страница">
@@ -65,7 +65,7 @@
                 <br>
                 <span>Сб - вс выходной</span>
             </div>
-            <form class="main_search" action="http://fe.it-academy.by/TestForm.php" method="get">
+            <form class="main_search" action="http://fe.it-academy.by/TestForm.php" method="get" target="_blank">
                 <input type="text" placeholder="Поиск" name="search_query">
             </form>            
         </div>
@@ -108,7 +108,7 @@
         </div>
         <!-- Конец блока "Ссылки на группы товаров" -->
     </div>
-    <!-- Конец Сабфутера с контактами и ссылками на группы товаров -->
+    <!-- Конец Сабхэдера с контактами и ссылками на группы товаров -->
 
     <!-- Начало блока баннера с информацией про конкретный товар -->
     <div class="banner1_info">
@@ -465,15 +465,77 @@
     <div class="banner2_info">
         <div class="banner2_description">
             <h2>Подпишись и получи скидку на всю продукцию</h2>
-            <form class="mail_submit" action="http://fe.it-academy.by/TestForm.php" method="get">
+            <form class="mail_submit" action="http://fe.it-academy.by/TestForm.php" method="post" target="_blank">
                 <input type="text" placeholder="E-mail" name="client_mail">
-                <input type="submit" value="отправить" class="green_button2">
+                <input type="submit" value="Отправить" class="green_button2">
             </form>
         </div>
     </div>
     <!-- Конец блока баннера для подписки на почтовую рассылку -->
 
-    
+    <!-- Начало Футера -->
+    <div class="footer">
+        <div class="container">
+            <div>
+                <a href="web_maket.html" title="Главная страница">
+                    <img src="img/shop_logo.svg" alt="shop_logo">
+                </a>
+            </div>
+            <div>
+                <h3>Информация</h3>
+                <ul>
+                    <li><a href="#Delivery&payment" title="Доставка и оплата">Доставка и оплата</a></li>
+                    <li><a href="#Reviews" title="Отзывы">Отзывы</a></li>
+                    <li><a href="#AboutUs" title="О магазине">О магазине</a></li>
+                    <li><a href="#Contacts" title="Контакты">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Категории</h3>
+                <ul>
+                    <li><a href="#tea" title="Каталог чая">Чай</a></li>
+                    <li><a href="#coffee" title="Каталог кофе">Кофе</a></li>
+                    <li><a href="#sweet" title="Каталог сладостей">Сладенькое</a></li>
+                    <li><a href="#attributes" title="Каталог атрибутов">Атрибуты</a></li>
+                    <li><a href="#sets" title="Каталог наборов">Наборы</a></li>
+                    <li><a href="#promotions" title="Наши акции">Акции</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Телефон, время работы</h3>                
+                <div>
+                    <img src="img/phone_logo.svg" alt="phone_logo">
+                    <a class="phone_number_1" href="tel:+375297654565" title="Телефон для связи">+375 (29) 765 45 65</a>
+                </div>
+                <br>
+                <span>Пн - пт  с 9:00 до 19:00</span>
+                <br>
+                <span>Сб - вс выходной</span>                
+            </div>
+            <div>
+                <h3><i class="fa fa-map-marker" aria-hidden="true"></i> Адрес</h3>
+                <br>
+                <span>Дмитровское ш., д.</span>
+                <br>
+                <span>125, стр. 1, офис 5</span>
+            </div>
+            <div>
+                <a href="#instagram" title="Наш instagram">
+                    <img src="img/instagram_logo.svg" alt="instagram">
+                </a>
+                <a href="#twitter" title="Наш twitter">
+                    <img src="img/twitter_logo.svg" alt="twitter">
+                </a>
+                <a href="#youtube" title="Наш youtube">
+                    <img src="img/youtube_logo.svg" alt="youtube">
+                </a>
+                <a href="#facebook" title="Наш facebook">
+                    <img src="img/facebook_logo.svg" alt="facebook">
+                </a>                
+            </div>
+        </div>
+    </div>
+
 
 </body>
 </html>
