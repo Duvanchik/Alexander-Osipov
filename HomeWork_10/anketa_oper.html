@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var surname = prompt("Введите вашу фамилию.", "Иванов");
+        var name = prompt("Введите ваше имя.", "Иван");
+        var patronymic = prompt("Введите вашу отчество.", "Иванович");
+        var ageYears = parseInt(prompt("Введите ваш возраст в годах.", "30"));
+        var sexConfirm = confirm("Ваш пол мужской?"); //Если true, то пол мужской
+
+        var fullName = surname + " " + name + " " + patronymic;
+        var ageDays = ageYears * 365;
+        var sex = "";
+        var pension = "нет";
+
+        // sexConfirm == true
+        // sex = "Мужской" 
+        // sex = "Женский"
+        // pension = "да"
+        // ageYears >= 63
+        // ageYears >= 58
+        
+        sexConfirm == true ? (sex = "Мужской", ageYears >= 63 ? pension = "да" :pension) : (sex = "Женский", ageYears >= 58 ? pension = "да" :pension);
+
+
+
+
+
+
+        // if (sexConfirm == true){
+        //     sex = "Мужской";
+        //     if (ageYears >= 63)
+        //         pension = "да"
+        // }else{
+        //     sex = "Женский";
+        //     if (ageYears >= 58)
+        //         pension = "да"
+        // }
+       
+        
+        alert("ваше ФИО: " + fullName + "\n" +
+                "ваш возраст в годах: " + ageYears + "\n" + 
+                "ваш возраст в днях: " + ageDays + "\n" + 
+                "через 5 лет вам будет: " + (ageYears + 5) + "\n" + 
+                "ваш пол: " + sex + "\n" + 
+                "вы на пенсии: " + pension);
+        
+        
+    </script>
+</body>
+</html>

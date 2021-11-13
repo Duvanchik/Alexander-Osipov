@@ -374,6 +374,7 @@ h2{
 
 .best_items{
     margin: 0 -10px 0;
+    text-align: center;
 }
 /* Стиль карточки продукта */
     
@@ -635,7 +636,7 @@ input[name="client_mail"]{
     height: 339px;
     max-width: 1400px;
     background-color:#4F6C4F;
-    padding: 67px 0 57px;
+    padding: 67px 20px 57px;
 }
 div.footer > div.container{
     position: relative;

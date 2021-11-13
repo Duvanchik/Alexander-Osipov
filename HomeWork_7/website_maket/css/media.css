@@ -1,0 +1,28 @@
+@media all and (max-width: 1253px){
+    .catalog_main > div:nth-child(1) {
+        background-position: 0 -100px;
+        background-color: #ebebeb;
+    }
+    .catalog_main > div:first-child > a{ 
+        color: white;
+        text-shadow: 1px 0 1px #000, 
+                    0 1px 1px #000, 
+                    -1px 0 1px #000, 
+                    0 -1px 1px #000;
+    }
+    .catalog_main > div:nth-child(2) {
+        background-position: -500px -95px;
+    }
+    .catalog_main > div:nth-child(4) {
+        background-position: -260px -250px;
+    }
+    .catalog_main {
+        margin-right: 0px;
+    }
+    .catalog_main div {
+        margin: 0 10px 16px 10px;
+    }
+    .best_items {
+        margin: 0 0 0;
+    }
+}

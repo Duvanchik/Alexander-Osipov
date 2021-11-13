@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input type="button" value="Ввод информации о стране" onclick="askUserAddInfo()">
+    <input type="button" value="Получение информации о стране" onclick="askUserGetInfo()">
+    <input type="button" value="Удаление информации о стране" onclick="askUserDeleteInfo()">
+    <input type="button" value="Перечень всех стран" onclick="getCountryList()">
+
+    <script>
+        function askUserAddInfo(){
+            var countryInfo = prompt("Введите название страны:");
+            var capitalInfo = prompt("Введите имя столицы этой страны:");
+            addCountry(countryInfo, capitalInfo);
+            alert("Информация записана!");
+        }
+        function askUserGetInfo(){
+            var countryInfo = prompt("Введите название страны, информацию о которой хотите получить:");
+            alert(getCountryInfo(countryInfo));
+        }
+        function askUserDeleteInfo(){
+            var countryInfo = prompt("Введите название страны, которую хотите удалить из списка:");
+            deleteCountry(countryInfo);
+        }
+        function getCountryList(){
+            console.log(listCountrys());
+        }
+
+    </script>
+    <script src="countries.js"></script>
+</body>
+</html>
