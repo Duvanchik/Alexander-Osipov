@@ -23,6 +23,50 @@
         margin: 0 10px 16px 10px;
     }
     .best_items {
+        margin: 0 145px 0;
+    }
+}
+@media all and (max-width: 919px){
+    .best_items {
         margin: 0 0 0;
     }
+
+    .footer{
+        height: auto;
+        max-width: 1400px;
+        padding: 20px 20px 20px;
+    }
+    div.footer > div.container{
+        position: relative;
+    }
+    div.footer > div.container > div{
+        display: block;
+        border-bottom: solid 1px #ffffff8e;
+        margin: 5px 0 5px;
+        padding: 10px 0 10px;
+
+        /* убрать границы по окончанию верстки */
+    }
+    div.footer > div.container > div:nth-child(4) > h3{
+        display: block;
+    }    
+    div.footer > div.container > div:first-child{
+        position: static;
+    }
+    div.footer > div.container > div:nth-child(2){
+        position: static;
+    }
+    div.footer > div.container > div:nth-child(3){
+        position: static;
+    }
+    div.footer > div.container > div:nth-child(4){
+        position: static;
+    }
+    div.footer > div.container > div:nth-child(5){
+        position: static;
+    }
+    div.footer > div.container > div:last-child{
+        position: static;
+    }
+    
 }
